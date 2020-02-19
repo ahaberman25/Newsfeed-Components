@@ -1,7 +1,6 @@
 /* This is the data we will be using to create our article components */
 /* Look over this data, then proceed to line 91*/
-const data = [
-  {
+const data = [{
     title: 'Lambda School Students: "We\'re the best!"',
     date: 'Nov 5th, 2018',
     firstParagraph: `Lucas ipsum dolor sit amet ben twi'lek padmé darth darth darth moff hutt organa twi'lek. Ben amidala secura skywalker lando
@@ -85,6 +84,13 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'My MF Article',
+    date: 'Feb 18th, 2020',
+    firstParagraph: `We all make mistakes in life, children Hey George, buddy, hey, I've been looking all over for you. You remember me, the guy who saved your life the other day. Yes, yes, I'm George, George McFly, and I'm your density. I mean, I'm your destiny. The future, it's where you're going? Thank you, don't forget to take a flyer. `,
+    secondParagraph: `Damn. I'm late for school. Oh, great scott. You get the cable, I'll throw the rope down to you. Good evening, I'm Doctor Emmet Brown, I'm standing here on the parking lot of- Yeah but George, Lorraine wants to go with you. Give her a break. You want it, you know you want it, and you know you want me to give it to you. `,
+    thirdParagraph: `Well, bring her along. This concerns her too. Go. Who the hell is John F. Kennedy? I can't believe you loaned me a car, without telling me it had a blindspot. I could've been killed. Oh, great scott. You get the cable, I'll throw the rope down to you.`
   }
 ];
 
@@ -100,6 +106,58 @@ const data = [
   </div>
 
   Hint: You will need to use createElement more than once here!
+
+  */
+
+const articlesFn = (title, date, pOne, pTwo, pThree) => {
+
+  const articles = document.querySelector('.articles')
+
+  const articleContainer = document.createElement('div')
+  articleContainer.classList.add('article')
+
+  const articleHeader = document.createElement('h2')
+  articleHeader.textContent = title
+
+  const dateText = document.createElement('p')
+  dateText.classList.add('date')
+  dateText.textContent = date
+
+
+  const pTextOne = document.createElement('p')
+  pTextOne.textContent = pOne
+  const pTextTwo = document.createElement('p')
+  pTextTwo.textContent = pTwo
+  const pTextThree = document.createElement('p')
+  pTextThree.textContent = pThree
+
+  const btn = document.createElement('span')
+  btn.classList.add('expandButton')
+  btn.textContent = 'CLICK ME NAO'
+  btn.addEventListener('click', e => {
+    articleContainer.classList.toggle('article-open')
+  })
+
+  articles.appendChild(articleContainer)
+  articleContainer.appendChild(articleHeader)
+  articleContainer.appendChild(dateText)
+  articleContainer.appendChild(pTextOne)
+  articleContainer.appendChild(pTextTwo)
+  articleContainer.appendChild(pTextThree)
+  articleContainer.appendChild(btn)
+
+
+  return articles;
+
+}
+
+data.forEach((item) => {
+  articlesFn(item.title, item.date, item.firstParagraph, item.secondParagraph, item.thirdParagraph)
+})
+
+
+
+/*
 
   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
 
