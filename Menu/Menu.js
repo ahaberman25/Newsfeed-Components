@@ -21,6 +21,41 @@ let menuItems = [
 
   The function takes an array as its only argument.
 
+  */
+
+  const mfMenu = (mi) => {
+
+    const menuHeader = document.querySelector('.header')
+
+    const menuDiv = document.createElement('div')
+    menuDiv.classList.add('menu')
+
+    const listContainer = document.createElement('ul')
+    
+    mi.forEach((item) => {
+      const listItems = document.createElement('li')
+      listItems.textContent = item
+      listContainer.appendChild(listItems)
+    })
+
+    const menuBtn = document.querySelector('.menu-button')
+    menuBtn.addEventListener('click', e => {
+      menuDiv.classList.toggle('menu--open')
+    })
+
+    menuHeader.appendChild(menuDiv)
+    menuDiv.appendChild(listContainer)
+    
+    console.log(menuHeader)
+
+    return menuHeader;
+
+  }
+
+  mfMenu(menuItems);
+
+  /*
+
   Step 2: Inside this function, iterate over the array creating a list item <li> element for each item in the array. 
   Add those items to the <ul>
 

@@ -91,6 +91,13 @@ const data = [{
     firstParagraph: `We all make mistakes in life, children Hey George, buddy, hey, I've been looking all over for you. You remember me, the guy who saved your life the other day. Yes, yes, I'm George, George McFly, and I'm your density. I mean, I'm your destiny. The future, it's where you're going? Thank you, don't forget to take a flyer. `,
     secondParagraph: `Damn. I'm late for school. Oh, great scott. You get the cable, I'll throw the rope down to you. Good evening, I'm Doctor Emmet Brown, I'm standing here on the parking lot of- Yeah but George, Lorraine wants to go with you. Give her a break. You want it, you know you want it, and you know you want me to give it to you. `,
     thirdParagraph: `Well, bring her along. This concerns her too. Go. Who the hell is John F. Kennedy? I can't believe you loaned me a car, without telling me it had a blindspot. I could've been killed. Oh, great scott. You get the cable, I'll throw the rope down to you.`
+  },
+  {
+    title: 'My Other MF Article',
+    date: 'Feb 19th, 2020',
+    firstParagraph: `We all make mistakes in life, children Hey George, buddy, hey, I've been looking all over for you. You remember me, the guy who saved your life the other day. Yes, yes, I'm George, George McFly, and I'm your density. I mean, I'm your destiny. The future, it's where you're going? Thank you, don't forget to take a flyer. `,
+    secondParagraph: `Damn. I'm late for school. Oh, great scott. You get the cable, I'll throw the rope down to you. Good evening, I'm Doctor Emmet Brown, I'm standing here on the parking lot of- Yeah but George, Lorraine wants to go with you. Give her a break. You want it, you know you want it, and you know you want me to give it to you. `,
+    thirdParagraph: `Well, bring her along. This concerns her too. Go. Who the hell is John F. Kennedy? I can't believe you loaned me a car, without telling me it had a blindspot. I could've been killed. Oh, great scott. You get the cable, I'll throw the rope down to you.`
   }
 ];
 
