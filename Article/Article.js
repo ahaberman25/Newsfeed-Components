@@ -141,7 +141,8 @@ const articlesFn = (title, date, pOne, pTwo, pThree) => {
   const btn = document.createElement('span')
   btn.classList.add('expandButton')
   btn.textContent = 'CLICK ME NAO'
-  btn.addEventListener('click', e => {
+  btn.addEventListener('click', e => {        
+    articleContainer.style.transition = 'all 3s'
     articleContainer.classList.toggle('article-open')
   })
 

@@ -36,10 +36,17 @@ let menuItems = [
       const listItems = document.createElement('li')
       listItems.textContent = item
       listContainer.appendChild(listItems)
+      listItems.addEventListener('mouseenter', e => {
+        gsap.to(listItems, {rotation: 27, x: 100, duration: 1}); 
+      })
+      listItems.addEventListener('mouseleave', e => {
+        gsap.to(listItems, {rotation: 0, x: 0, duration: 1}); 
+      })
     })
 
     const menuBtn = document.querySelector('.menu-button')
-    menuBtn.addEventListener('click', e => {
+    menuBtn.addEventListener('click', e => {  
+      menuDiv.style.transition = 'all 3s'
       menuDiv.classList.toggle('menu--open')
     })
 
